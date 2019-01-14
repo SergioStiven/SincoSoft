@@ -9,17 +9,20 @@ using System.Web.Http;
 
 namespace SincoABR.WebApi.Controllers
 {
-    public class StudentController : ApiController
+    [RoutePrefix("api/students")]
+    public class StudentsController : ApiController
     {
 
         StudentBusiness _studentBusiness;
 
-        public StudentController()
+        public StudentsController()
         {
             _studentBusiness = new StudentBusiness();
         }
 
-        public IHttpActionResult Get()
+        [Route("getall")]
+        [HttpGet]
+        public IHttpActionResult GetAll()
         {
             try
             {
@@ -31,6 +34,21 @@ namespace SincoABR.WebApi.Controllers
                 return InternalServerError(ex);
             }
         }
-        
+
+        [Route("getbyid/{id}")]
+        [HttpGet]
+        public IHttpActionResult GetById(int id)
+        {
+            try
+            {
+                Student student = _studentBusiness.GetById(id);
+                return Ok(student);
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
+        }
+
     }
 }

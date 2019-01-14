@@ -15,5 +15,11 @@ namespace SincoABR.Business
             StudentRepository repository = new StudentRepository();
             return repository.GetAll();
         }
+
+        public Student GetById(int id)
+        {
+            StudentRepository repository = new StudentRepository();
+            return repository.GetById(id);
+        }
     }
 }

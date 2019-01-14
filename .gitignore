@@ -14,10 +14,12 @@
 /SincoABR.Business/bin/Release
 /SincoABR.Business/obj/Debug
 /SincoABR.Business/obj/Release
+/SincoABR.Repositories/bin/Debug
+/SincoABR.Repositories/obj/Debug
+/SincoABR.Repositories/obj/Release
 /.vs
 
 # compiled output
 /SincoABR.Web/dist
 /SincoABR.Web/tmp
 /SincoABR.Web/out-tsc
-

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-student-add',
@@ -40,9 +41,9 @@ export class StudentAddComponent {
     {name: 'Tarde', id: 'T'}
   ];
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private route: ActivatedRoute) {}
 
   onSubmit() {
-
+    console.log(this.route.snapshot.paramMap.get('id'));
   }
 }

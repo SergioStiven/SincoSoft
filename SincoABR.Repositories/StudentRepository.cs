@@ -9,10 +9,17 @@ namespace SincoABR.Repositories
 {
     public class StudentRepository
     {
-
         public List<Student> GetAll()
         {
-            return new List<Student>
+            return _dataStudents;
+        }
+
+        public Student GetById(int id)
+        {
+            return _dataStudents.Where(x => x.Id == id).FirstOrDefault();
+        }
+
+        List<Student> _dataStudents = new List<Student>
             {
                 new Student
                 {
@@ -43,7 +50,6 @@ namespace SincoABR.Repositories
                     StudyDay = 1
                 }
             };
-        }
 
     }
 }
