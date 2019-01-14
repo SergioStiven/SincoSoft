@@ -1,0 +1,115 @@
+<form [formGroup]="studentForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>Nuevo Estudiante</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput maxlength="50" placeholder="Nombres" formControlName="name">
+            <mat-error *ngIf="studentForm.controls['name'].hasError('required')">
+              Nombres <strong>obligatorios</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput maxlength="50" placeholder="Apellidos" formControlName="lastName">
+            <mat-error *ngIf="studentForm.controls['lastName'].hasError('required')">
+              Apellidos <strong>obligatorios</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Tipo de identificación" formControlName="idType">
+              <mat-option *ngFor="let idType of idTypes" [value]="idType.id">
+                {{ idType.name }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="studentForm.controls['idType'].hasError('required')">
+              Tipo de identificación <strong>obligatorio</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput maxlength="10" placeholder="Nro. Identificación" formControlName="identification">
+            <mat-error *ngIf="studentForm.controls['identification'].hasError('required')">
+              Nro. Identificación <strong>obligatorio</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Fecha de nacimiento" formControlName="dob">
+            <mat-error *ngIf="studentForm.controls['dob'].hasError('required')">
+              Fecha de nacimiento <strong>obligatorio</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput maxlength="10" placeholder="Teléfono" formControlName="phone">
+            <mat-error *ngIf="studentForm.controls['phone'].hasError('required')">
+              Teléfono <strong>obligatorio</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput maxlength="200" placeholder="Dirección" formControlName="address">
+            <mat-error *ngIf="studentForm.controls['address'].hasError('required')">
+              Dirección <strong>obligatoria</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Ciudad" formControlName="city">
+            <mat-error *ngIf="studentForm.controls['city'].hasError('required')">
+              Ciudad <strong>obligatorio</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Curso" formControlName="grade">
+              <mat-option *ngFor="let grade of grades" [value]="grade.id">
+                {{ grade.name }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="studentForm.controls['grade'].hasError('required')">
+              Curso <strong>obligatorio</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Jornada" formControlName="day">
+              <mat-option *ngFor="let day of days" [value]="day.id">
+                {{ day.name }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="studentForm.controls['day'].hasError('required')">
+              Jornada <strong>obligatoria</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Guardar</button>
+      <button mat-stroked-button color="warn"  routerLink="/student/student-list" routerLinkActive="active">Regresar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

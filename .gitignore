@@ -1,0 +1,23 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/packages
+/SincoABR.Web/node_modules
+/SincoABR.Entities/bin
+/SincoABR.Entities/obj/Debug
+/SincoABR.Entities/obj/Release
+/SincoABR.WebApi/bin
+/SincoABR.WebApi/obj/Debug
+/SincoABR.WebApi/obj/Release
+/SincoABR.Business/bin/Debug
+/SincoABR.Business/bin/Release
+/SincoABR.Business/obj/Debug
+/SincoABR.Business/obj/Release
+/.vs
+
+# compiled output
+/SincoABR.Web/dist
+/SincoABR.Web/tmp
+/SincoABR.Web/out-tsc
+
