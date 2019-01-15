@@ -7,16 +7,16 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput maxlength="50" placeholder="Nombres" formControlName="name">
-            <mat-error *ngIf="studentForm.controls['name'].hasError('required')">
+            <input matInput maxlength="50" placeholder="Nombres" formControlName="Name">
+            <mat-error *ngIf="studentForm.controls['Name'].hasError('required')">
               Nombres <strong>obligatorios</strong>
             </mat-error>
           </mat-form-field>
         </div>
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput maxlength="50" placeholder="Apellidos" formControlName="lastName">
-            <mat-error *ngIf="studentForm.controls['lastName'].hasError('required')">
+            <input matInput maxlength="50" placeholder="Apellidos" formControlName="LastName">
+            <mat-error *ngIf="studentForm.controls['LastName'].hasError('required')">
               Apellidos <strong>obligatorios</strong>
             </mat-error>
           </mat-form-field>
@@ -25,20 +25,20 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <mat-select placeholder="Tipo de identificación" formControlName="idType">
+            <mat-select placeholder="Tipo de identificación" formControlName="TypeId">
               <mat-option *ngFor="let idType of idTypes" [value]="idType.id">
                 {{ idType.name }}
               </mat-option>
             </mat-select>
-            <mat-error *ngIf="studentForm.controls['idType'].hasError('required')">
+            <mat-error *ngIf="studentForm.controls['TypeId'].hasError('required')">
               Tipo de identificación <strong>obligatorio</strong>
             </mat-error>
           </mat-form-field>
         </div>
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput maxlength="10" placeholder="Nro. Identificación" formControlName="identification">
-            <mat-error *ngIf="studentForm.controls['identification'].hasError('required')">
+            <input matInput maxlength="10" placeholder="Nro. Identificación" formControlName="Identification">
+            <mat-error *ngIf="studentForm.controls['Identification'].hasError('required')">
               Nro. Identificación <strong>obligatorio</strong>
             </mat-error>
           </mat-form-field>
@@ -47,16 +47,16 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Fecha de nacimiento" formControlName="dob">
-            <mat-error *ngIf="studentForm.controls['dob'].hasError('required')">
+            <input matInput placeholder="Fecha de nacimiento" formControlName="Dob">
+            <mat-error *ngIf="studentForm.controls['Dob'].hasError('required')">
               Fecha de nacimiento <strong>obligatorio</strong>
             </mat-error>
           </mat-form-field>
         </div>
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput maxlength="10" placeholder="Teléfono" formControlName="phone">
-            <mat-error *ngIf="studentForm.controls['phone'].hasError('required')">
+            <input matInput maxlength="10" placeholder="Teléfono" formControlName="Phone">
+            <mat-error *ngIf="studentForm.controls['Phone'].hasError('required')">
               Teléfono <strong>obligatorio</strong>
             </mat-error>
           </mat-form-field>
@@ -65,16 +65,16 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput maxlength="200" placeholder="Dirección" formControlName="address">
-            <mat-error *ngIf="studentForm.controls['address'].hasError('required')">
+            <input matInput maxlength="200" placeholder="Dirección" formControlName="Address">
+            <mat-error *ngIf="studentForm.controls['Address'].hasError('required')">
               Dirección <strong>obligatoria</strong>
             </mat-error>
           </mat-form-field>
         </div>
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Ciudad" formControlName="city">
-            <mat-error *ngIf="studentForm.controls['city'].hasError('required')">
+            <input matInput placeholder="Ciudad" formControlName="City">
+            <mat-error *ngIf="studentForm.controls['City'].hasError('required')">
               Ciudad <strong>obligatorio</strong>
             </mat-error>
           </mat-form-field>
@@ -83,24 +83,24 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <mat-select placeholder="Curso" formControlName="grade">
+            <mat-select placeholder="Curso" formControlName="Grade">
               <mat-option *ngFor="let grade of grades" [value]="grade.id">
                 {{ grade.name }}
               </mat-option>
             </mat-select>
-            <mat-error *ngIf="studentForm.controls['grade'].hasError('required')">
+            <mat-error *ngIf="studentForm.controls['Grade'].hasError('required')">
               Curso <strong>obligatorio</strong>
             </mat-error>
           </mat-form-field>
         </div>
         <div class="col">
           <mat-form-field class="full-width">
-            <mat-select placeholder="Jornada" formControlName="day">
-              <mat-option *ngFor="let day of days" [value]="day.id">
-                {{ day.name }}
+            <mat-select placeholder="Jornada" formControlName="StudyDay">
+              <mat-option *ngFor="let studyDay of studyDays" [value]="studyDay.id">
+                {{ studyDay.name }}
               </mat-option>
             </mat-select>
-            <mat-error *ngIf="studentForm.controls['day'].hasError('required')">
+            <mat-error *ngIf="studentForm.controls['StudyDay'].hasError('required')">
               Jornada <strong>obligatoria</strong>
             </mat-error>
           </mat-form-field>

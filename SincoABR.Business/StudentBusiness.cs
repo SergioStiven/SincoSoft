@@ -21,5 +21,17 @@ namespace SincoABR.Business
             StudentRepository repository = new StudentRepository();
             return repository.GetById(id);
         }
+
+        public int Save(Student student)
+        {
+            StudentRepository repository = new StudentRepository();
+            return repository.Save(student);
+        }
+
+        public void Update(Student student)
+        {
+            StudentRepository repository = new StudentRepository();
+            repository.Update(student);
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace SincoABR.Entities
         public string LastName { get; set; }
         public int TypeId { get; set; }
         public string Identification { get; set; }
-        public DateTime Dbo { get; set; }
+        public string Dob { get; set; }
         public string Phone { get; set; }
         public string Address { get; set; }
         public string City { get; set; }

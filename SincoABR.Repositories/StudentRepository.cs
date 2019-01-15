@@ -19,6 +19,30 @@ namespace SincoABR.Repositories
             return _dataStudents.Where(x => x.Id == id).FirstOrDefault();
         }
 
+        public int Save(Student student)
+        {
+            student.Id = _dataStudents.OrderByDescending(s => s.Id).FirstOrDefault().Id + 1;
+            _dataStudents.Add(student);
+            return student.Id;
+        }
+
+        public void Update(Student student)
+        {
+            List<Student> list = new List<Student>();
+            foreach (var item in _dataStudents)
+            {
+                if (item.Id == student.Id)
+                {
+                    list.Add(student);
+                }
+                else
+                {
+                    list.Add(item);
+                }
+            }
+            _dataStudents = list;
+        }
+
         List<Student> _dataStudents = new List<Student>
             {
                 new Student
@@ -31,13 +55,13 @@ namespace SincoABR.Repositories
                     Address = "Calle 100 # 33 - 56",
                     City = "Bogotá",
                     Phone = "3108568706",
-                    Dbo = DateTime.Now.AddYears(-24),
+                    Dob = DateTime.Now.AddYears(-24).ToString("dd/MM/yyyy"),
                     Grade = 11,
                     StudyDay = 1
                 },
                 new Student
                 {
-                    Id = 1,
+                    Id = 2,
                     Name = "Jose Eduardo",
                     LastName = "Parra Monsalve",
                     TypeId = 1,
@@ -45,7 +69,7 @@ namespace SincoABR.Repositories
                     Address = "Kr 30 # 26 - 16",
                     City = "Bogotá",
                     Phone = "3002546897",
-                    Dbo = DateTime.Now.AddYears(-20),
+                    Dob = DateTime.Now.AddYears(-20).ToString("dd/MM/yyyy"),
                     Grade = 10,
                     StudyDay = 1
                 }

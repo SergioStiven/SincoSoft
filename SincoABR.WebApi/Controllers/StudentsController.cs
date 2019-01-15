@@ -50,5 +50,35 @@ namespace SincoABR.WebApi.Controllers
             }
         }
 
+        [Route("save")]
+        [HttpPost]
+        public IHttpActionResult Save(Student student)
+        {
+            try
+            {
+                int id = _studentBusiness.Save(student);
+                return Ok(id);
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
+        }
+
+        [Route("update/{id}")]
+        [HttpPut]
+        public IHttpActionResult Update(Student student, int id)
+        {
+            try
+            {
+                student.Id = id;
+                _studentBusiness.Update(student);
+                return Ok(id);
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
+        }
     }
 }
