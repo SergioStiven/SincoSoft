@@ -12,6 +12,7 @@ import { MatButtonModule, MatSidenavModule, MatIconModule, MatToolbarModule,
 import { NavComponent } from './nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { StudentModule } from './student/student.module';
+import { TeacherModule } from './teacher/teacher.module';
 import { TeacherComponent } from './teacher/teacher.component';
 import { SubjectComponent } from './subject/subject.component';
 
@@ -37,7 +38,8 @@ import { SubjectComponent } from './subject/subject.component';
     MatSelectModule,
     MatRadioModule,
     MatCardModule,
-    StudentModule
+    StudentModule,
+    TeacherModule
   ],
   providers: [],
   bootstrap: [AppComponent]

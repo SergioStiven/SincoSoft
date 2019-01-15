@@ -1,0 +1,16 @@
+<div class="content">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Asignación de materias</mat-card-title>
+    </mat-card-header>
+    <mat-selection-list #shoes>
+      <mat-list-option *ngFor="let shoe of typesOfShoes">
+        {{shoe}}
+      </mat-list-option>
+    </mat-selection-list>
+    
+    <p>
+      Total materias asignadas: {{shoes.selectedOptions.selected.length}}
+    </p>
+  </mat-card>
+</div>

@@ -11,7 +11,7 @@ import { Student } from '../student';
 export class StudentListComponent implements OnInit {
 
   students: Student[];
-  displayedColumns: string[] = ['Name', 'LastName', 'Grade', 'StudyDay'];
+  displayedColumns: string[] = ['Name', 'LastName', 'Grade', 'StudyDay', 'asigante'];
   dataSource = new MatTableDataSource();
 
   constructor(private studentService: StudentService){}
@@ -31,4 +31,9 @@ export class StudentListComponent implements OnInit {
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
+
+  asigante() {
+    
+  }
+  
 }

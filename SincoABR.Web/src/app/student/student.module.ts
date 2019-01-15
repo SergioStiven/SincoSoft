@@ -5,12 +5,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule, MatCardModule, MatFormFieldModule, MatRadioModule, MatSelectModule, MatInputModule,
          MatTableModule } from '@angular/material';
 import { DatePipe } from '@angular/common';
+import {MatListModule} from '@angular/material/list';
 
 import { StudentAddComponent } from './student-add/student-add.component';
 
 import { StudentComponent } from './student.component';
 import { StudentRoutingModule } from './student-routing.module';
 import { StudentListComponent } from './student-list/student-list.component';
+import { StudentReportComponent } from './student-report/student-report.component';
+import { StudentAsigateMateryComponent } from './student-asigate-matery/student-asigate-matery.component';
 
 @NgModule({
   imports: [
@@ -24,12 +27,15 @@ import { StudentListComponent } from './student-list/student-list.component';
     MatSelectModule,
     StudentRoutingModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    MatListModule
   ],
   declarations: [
     StudentComponent,
     StudentAddComponent,
-    StudentListComponent
+    StudentListComponent,
+    StudentReportComponent,
+    StudentAsigateMateryComponent,
   ],
   providers:[
     DatePipe
