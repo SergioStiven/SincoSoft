@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material';
-// import { StudentService } from '../student.service';
-// import { Student } from '../student';
+import { TeacherService } from '../teacher.service';
+import { Teacher } from '../teacher';
 
 @Component({
   selector: 'app-teacher-list',
@@ -10,26 +10,26 @@ import {MatTableDataSource} from '@angular/material';
 })
 export class TeacherListComponent implements OnInit {
 
-  // students: Student[];
-  // displayedColumns: string[] = ['Name', 'LastName', 'Grade', 'StudyDay'];
-  // dataSource = new MatTableDataSource();
+  teachers: Teacher[];
+  displayedColumns: string[] = ['Name', 'LastName', 'Grade', 'StudyDay'];
+  dataSource = new MatTableDataSource();
 
-  // constructor(private studentService: StudentService){}
+  constructor(private teacherService: TeacherService) {}
 
   ngOnInit() {
-    // this.getStudents();
+    this.getTeachers();
   }
 
-  // getStudents(): void {
-  //   this.studentService.getAll()
-  //       .subscribe(res => {
-          // this.students = res;
-          // this.dataSource.data = this.students;
-  //       });
-  // }
+  getTeachers(): void {
+    this.teacherService.getAll()
+        .subscribe(res => {
+          this.teachers = res;
+          this.dataSource.data = this.teachers;
+        });
+  }
 
-  // applyFilter(filterValue: string) {
-  //   this.dataSource.filter = filterValue.trim().toLowerCase();
-  // }
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
 
 }
