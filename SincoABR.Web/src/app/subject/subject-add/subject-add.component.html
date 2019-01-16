@@ -1,0 +1,24 @@
+<form [formGroup]="subjectForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>Nueva Materia</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput maxlength="50" placeholder="Nombre" formControlName="Name">
+            <mat-error *ngIf="subjectForm.controls['Name'].hasError('required')">
+              Nombre <strong>obligatorio</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Guardar</button>
+      <button mat-stroked-button color="warn" routerLink="/subject/subject-list" routerLinkActive="active">Regresar</button>
+      <span class="notificationSpan">{{ messageNotif }}</span>
+    </mat-card-actions>
+  </mat-card>
+</form>

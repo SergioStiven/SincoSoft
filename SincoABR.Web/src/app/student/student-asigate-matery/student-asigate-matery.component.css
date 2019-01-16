@@ -12,6 +12,11 @@ table {
 .content{
   padding: 20px;
 }
+
+button{
+  margin-right: 8px !important;
+}
+
 .btn-buttonsRight {
   text-align: center;
   width: 384px;

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { StudentService } from '../student.service';
+import { StudentService } from '../shared/student.service';
+import {MatSnackBar} from '@angular/material';
 
 @Component({
   selector: 'app-student-add',
@@ -9,6 +10,9 @@ import { StudentService } from '../student.service';
   styleUrls: ['./student-add.component.css']
 })
 export class StudentAddComponent implements OnInit {
+
+  studentId = 0;
+  messageNotif = '';
 
   studentForm = this.fb.group({
     Id: 0,
@@ -49,12 +53,14 @@ export class StudentAddComponent implements OnInit {
     {name: 'Tarde', id: 2}
   ];
 
-  constructor(private fb: FormBuilder, private studentService: StudentService, private route: ActivatedRoute) {}
+  constructor(private fb: FormBuilder, private studentService: StudentService,
+              private route: ActivatedRoute, public snackBar: MatSnackBar) {}
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
     if (id != null) {
-      this.getStudent(parseInt(id, 10));
+      this.studentId = parseInt(id, 10);
+      this.getStudent(this.studentId);
     }
   }
 
@@ -84,12 +90,13 @@ export class StudentAddComponent implements OnInit {
       if (student.Id > 0) {
         this.studentService.update(student, student.Id)
             .subscribe(res => {
-              console.log(res);
+              this.messageNotif = 'La información se ha actualizado.';
             });
       } else {
         this.studentService.save(student)
             .subscribe(res => {
               console.log(res);
+              this.messageNotif = 'La información se ha guardado.';
             });
       }
     }

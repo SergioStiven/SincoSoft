@@ -37,12 +37,13 @@
 
         <!-- asigante Column -->
         <ng-container matColumnDef="asigante">
-            <th mat-header-cell *matHeaderCellDef> Asigar materias </th>
-            <td mat-cell *matCellDef="let element" routerLink="/teacher/teacher-general"> asd </td>
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element">
+                <i class="material-icons" routerLink="/teacher/teacher-asignateMatery">spellcheck</i>
+            </td>
         </ng-container>
         
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
 </div>
-      

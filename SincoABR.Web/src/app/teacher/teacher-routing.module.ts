@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TeacherComponent } from './teacher.component';
 import { TeacherAddComponent } from './teacher-add/teacher-add.component';
 import { TeacherListComponent } from './teacher-list/teacher-list.component';
-import { TeacherGeneralButtonsComponent } from './teacher-general-buttons/teacher-general-buttons.component';
+import { AsignateMateryComponent } from './asignate-matery/asignate-matery.component';
 import { from } from 'rxjs';
 
 const teacherRoutes: Routes = [
@@ -28,8 +28,8 @@ const teacherRoutes: Routes = [
         component: TeacherAddComponent
       },
       {
-        path: 'teacher-general',
-        component: TeacherGeneralButtonsComponent,
+        path: 'teacher-asignateMatery',
+        component: AsignateMateryComponent,
       }
     ]
   }

@@ -3,9 +3,10 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule, MatCardModule, MatFormFieldModule, MatRadioModule, MatSelectModule, MatInputModule,
-         MatTableModule } from '@angular/material';
+         MatTableModule, MatTooltipModule } from '@angular/material';
 import { DatePipe } from '@angular/common';
 import {MatListModule} from '@angular/material/list';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { StudentAddComponent } from './student-add/student-add.component';
 
@@ -28,7 +29,9 @@ import { StudentAsigateMateryComponent } from './student-asigate-matery/student-
     StudentRoutingModule,
     MatInputModule,
     MatTableModule,
-    MatListModule
+    MatListModule,
+    MatSnackBarModule,
+    MatTooltipModule
   ],
   declarations: [
     StudentComponent,

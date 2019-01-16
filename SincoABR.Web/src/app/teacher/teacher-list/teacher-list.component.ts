@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material';
-import { TeacherService } from '../teacher.service';
-import { Teacher } from '../teacher';
+import { TeacherService } from '../shared/teacher.service';
+import { Teacher } from '../shared/teacher';
 
 @Component({
   selector: 'app-teacher-list',
@@ -11,7 +11,7 @@ import { Teacher } from '../teacher';
 export class TeacherListComponent implements OnInit {
 
   teachers: Teacher[];
-  displayedColumns: string[] = ['Name', 'LastName', 'Grade', 'StudyDay'];
+  displayedColumns: string[] = ['Name', 'LastName', 'Grade', 'StudyDay', 'asigante'];
   dataSource = new MatTableDataSource();
 
   constructor(private teacherService: TeacherService) {}

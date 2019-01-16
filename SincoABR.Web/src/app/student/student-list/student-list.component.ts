@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material';
-import { StudentService } from '../student.service';
-import { Student } from '../student';
+import { StudentService } from '../shared/student.service';
+import { Student } from '../shared/student';
 
 @Component({
   selector: 'app-student-list',
@@ -33,7 +33,6 @@ export class StudentListComponent implements OnInit {
   }
 
   asigante() {
-    
+
   }
-  
 }

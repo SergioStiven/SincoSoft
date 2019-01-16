@@ -14,7 +14,8 @@
     </p>
   </mat-card>
   <mat-card-actions>
-    <button mat-raised-button color="primary" type="submit">Guardar</button>
-    <button mat-stroked-button color="warn" routerLink="/student/student-list" routerLinkActive="active">Regresar</button>
+    <button mat-raised-button color="primary" type="submit" (click)="notification()">Guardar</button>
+    <button mat-stroked-button color="warn" routerLink="/teacher/teacher-list" routerLinkActive="active">Regresar</button>
+    <span class="notificationSpan">{{ messageNotif }}</span>
   </mat-card-actions>
 </div>

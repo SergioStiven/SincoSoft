@@ -1,3 +1,56 @@
-<p>
-  student-report works!
-</p>
+<div class="content">
+  <mat-card>
+      <mat-card-header>
+          <mat-card-title>Reporte Estudiante</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row">
+            <div class="col">
+                <p><b>Nombres: </b> <span>{{student.Name}}</span></p>
+            </div>
+            <div class="col">
+                <p><b>Apellidos: </b> <span>{{student.LastName}}</span></p>
+            </div>
+            <div class="col">
+                <p><b>Identificación: </b> <span>{{student.Identification}}</span></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p><b>Grado: </b> <span>{{student.Grade}}</span></p>
+            </div>
+            <div class="col">
+                <p><b>Ciudad: </b> <span>{{student.City}}</span></p>
+            </div>
+            <div class="col">
+                <p><b>Teléfono: </b> <span>{{student.Phone}}</span></p>
+            </div>
+        </div>
+      </mat-card-content>
+  </mat-card>
+  
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      
+      <!-- Matter Column -->
+      <ng-container matColumnDef="Matter">
+          <th mat-header-cell *matHeaderCellDef> Materia </th>
+          <td mat-cell *matCellDef="let element"> {{element.Name}} </td>
+      </ng-container>
+
+      <!-- Teacher Column -->
+      <ng-container matColumnDef="Teacher.Name">
+            <th mat-header-cell *matHeaderCellDef> Profesor </th>
+            <td mat-cell *matCellDef="let element"> {{element.Teacher.Name + ' ' + element.Teacher.LastName}} </td>
+        </ng-container>
+      
+      <!-- Note Column -->
+      <ng-container matColumnDef="Note">
+          <th mat-header-cell *matHeaderCellDef> Nota </th>
+          <td mat-cell *matCellDef="let element"> {{element.Note}} </td>
+      </ng-container>
+      
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+    

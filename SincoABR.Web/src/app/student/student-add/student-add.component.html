@@ -1,7 +1,7 @@
 <form [formGroup]="studentForm" novalidate (ngSubmit)="onSubmit()">
   <mat-card class="shipping-card">
     <mat-card-header>
-      <mat-card-title>Nuevo Estudiante</mat-card-title>
+      <mat-card-title>{{studentId > 0 ? 'Actualizar' : 'Nuevo'}} Estudiante</mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <div class="row">
@@ -108,8 +108,13 @@
       </div>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary" type="submit">Guardar</button>
-      <button mat-stroked-button color="warn"  routerLink="/student/student-list" routerLinkActive="active">Regresar</button>
+      <section class="buttonss">
+        <!-- <button mat-raised-button color="primary" type="submit">Guardar</button> -->
+        <button mat-button aria-label="Show an example snack-bar" type="submit">Guardar</button>
+        <button mat-stroked-button color="warn" routerLink="/student/student-list" routerLinkActive="active">Regresar</button>
+        <span class="notificationSpan">{{ messageNotif }}</span>
+      </section>
     </mat-card-actions>
   </mat-card>
 </form>
+

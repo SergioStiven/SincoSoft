@@ -32,7 +32,7 @@ const studentRoutes: Routes = [
         component: StudentAsigateMateryComponent
       },
       {
-        path: 'student/report',
+        path: 'student/report/:id',
         component: StudentReportComponent
       }
     ]

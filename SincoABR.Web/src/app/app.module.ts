@@ -13,6 +13,7 @@ import { NavComponent } from './nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { StudentModule } from './student/student.module';
 import { TeacherModule } from './teacher/teacher.module';
+import { SubjectModule } from './subject/subject.module';
 import { TeacherComponent } from './teacher/teacher.component';
 import { SubjectComponent } from './subject/subject.component';
 
@@ -20,8 +21,7 @@ import { SubjectComponent } from './subject/subject.component';
   declarations: [
     AppComponent,
     NavComponent,
-    TeacherComponent,
-    SubjectComponent
+    TeacherComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +39,8 @@ import { SubjectComponent } from './subject/subject.component';
     MatRadioModule,
     MatCardModule,
     StudentModule,
-    TeacherModule
+    TeacherModule,
+    SubjectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

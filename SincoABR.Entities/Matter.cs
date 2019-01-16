@@ -12,5 +12,8 @@ namespace SincoABR.Entities
         public string Name { get; set; }
         public string Note { get; set; }
         public int Status { get; set; }
+
+        public Student Student { get; set; }
+        public Teacher Teacher { get; set; }
     }
 }

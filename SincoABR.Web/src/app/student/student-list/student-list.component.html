@@ -4,7 +4,7 @@
             <mat-card-title>Estudiantes</mat-card-title>
         </mat-card-header>
         <mat-form-field>
-            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtrar">
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtro">
         </mat-form-field>
         <button mat-raised-button color="primary" routerLink="/student/student-add" routerLinkActive="active">Nuevo</button>
     </mat-card>
@@ -39,9 +39,9 @@
         <ng-container matColumnDef="asigante">
             <th mat-header-cell *matHeaderCellDef></th>
             <td mat-cell *matCellDef="let element" class="btn-buttonsRight">
-                <button mat-raised-button color="primary" routerLink="/student/student-detail/{{element.Id}}">Editar</button> &nbsp;
-                <a mat-raised-button routerLink="/student/student/report">Reporte</a> &nbsp;
-                <button mat-raised-button color="primary" routerLink="/student/student/asignate" (click)="asigante()">Asigar Materias</button>
+                <i matTooltip="Editar" class="material-icons" routerLink="/student/student-detail/{{element.Id}}">edit</i>
+                <i matTooltip="Reporte" class="material-icons" routerLink="/student/student/report/{{element.Id}}">insert_chart_outlined</i>
+                <i matTooltip="Asignar Materias" class="material-icons" routerLink="/student/student/asignate">spellcheck</i>
             </td>
         </ng-container>
         

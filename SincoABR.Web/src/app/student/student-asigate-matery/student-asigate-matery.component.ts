@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentAsigateMateryComponent implements OnInit {
   typesOfShoes = [
-    'Boots',
+    'Matemáticas',
+    'Español',
+    'Aritmética',
+    'Física',
+    'Ed. Física',
+    'Etica',
+    'Química'
   ];
 
   constructor() { }

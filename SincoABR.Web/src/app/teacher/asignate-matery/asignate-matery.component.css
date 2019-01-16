@@ -1,6 +1,6 @@
 table {
-  width: 100%;
-  margin-top: 5px;
+    width: 100%;
+    margin-top: 5px;
 }
 
 .mat-form-field {
@@ -17,8 +17,12 @@ table {
   width: 384px;
   padding-right: 0px !important;
 }
-.material-icons {
-  cursor: pointer;
-  padding-left: 10px;
-  outline: none;
+
+.notificationSpan {
+  font-size: 14px;
+  color: green;
+}
+
+button{
+  margin-right: 8px !important;
 }

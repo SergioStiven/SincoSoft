@@ -4,15 +4,12 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule, MatCardModule, MatFormFieldModule, MatRadioModule, MatSelectModule, MatInputModule,
          MatTableModule } from '@angular/material';
-import { DatePipe } from '@angular/common';
 import {MatListModule} from '@angular/material/list';
 
-import { TeacherAddComponent } from './teacher-add/teacher-add.component';
-
-// import { TeacherComponent } from './teacher.component';
-import { TeacherRoutingModule } from './teacher-routing.module';
-import { TeacherListComponent } from './teacher-list/teacher-list.component';
-import { AsignateMateryComponent } from './asignate-matery/asignate-matery.component';
+import { SubjectComponent } from './subject.component';
+import { SubjectAddComponent } from './subject-add/subject-add.component';
+import { SubjectRoutingModule } from './subject-routing.module';
+import { SubjectListComponent } from './subject-list/subject-list.component';
 
 @NgModule({
   imports: [
@@ -24,21 +21,17 @@ import { AsignateMateryComponent } from './asignate-matery/asignate-matery.compo
     MatFormFieldModule,
     MatRadioModule,
     MatSelectModule,
-    TeacherRoutingModule,
+    SubjectRoutingModule,
     MatInputModule,
     MatTableModule,
     MatListModule
   ],
   declarations: [
-    // TeacherComponent,
-    TeacherAddComponent,
-    TeacherListComponent,
-    AsignateMateryComponent
-  ],
-  providers:[
-    DatePipe
+    SubjectComponent,
+    SubjectAddComponent,
+    SubjectListComponent
   ]
 })
-export class TeacherModule {
+export class SubjectModule {
 
 }

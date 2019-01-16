@@ -7,8 +7,8 @@ import { TeacherListComponent } from './teacher/teacher-list/teacher-list.compon
 
 const routes: Routes = [
   // { path: 'teacher', component: TeacherComponent },
-  { path: 'subject', component: SubjectComponent },
-  { path: '',
+  {
+    path: '',
     redirectTo: '/teacher',
     pathMatch: 'full'
   }

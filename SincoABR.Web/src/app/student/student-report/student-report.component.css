@@ -1,0 +1,43 @@
+table {
+    width: 100%;
+    margin-top: 5px;
+  }
+  
+  .btn-back{
+    top: -35px;
+    float: right;
+  }
+
+  .mat-form-field {
+    font-size: 14px;
+    width: 90%;
+    padding-right: 25px;
+  }
+  
+  .content{
+    padding: 20px;
+  }
+  .btn-buttonsRight {
+    text-align: center;
+    width: 384px;
+    padding-right: 0px !important;
+  }
+  .material-icons {
+    cursor: pointer;
+    padding-left: 5px;
+    outline: none;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .col {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .col:last-child {
+    margin-right: 0;
+  }

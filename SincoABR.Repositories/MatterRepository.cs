@@ -48,14 +48,26 @@ namespace SincoABR.Repositories
                 new Matter
                 {
                     Id = 1,
-                    Name = "Carlos Alberto",
-                    Note = "4.5",
+                    Name = "Matemáticas",
+                    Note = "4.5"
                 },
                 new Matter
                 {
                     Id = 2,
-                    Name = "Alain",
-                    Note = "5",
+                    Name = "Ciencias",
+                    Note = "5.0"
+                },
+                new Matter
+                {
+                    Id = 3,
+                    Name = "Español",
+                    Note = "3.0"
+                },
+                new Matter
+                {
+                    Id = 3,
+                    Name = "Sociales",
+                    Note = "4.0"
                 }
             };
 

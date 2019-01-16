@@ -57,7 +57,42 @@ namespace SincoABR.Repositories
                     Phone = "3108568706",
                     Dob = DateTime.Now.AddYears(-24).ToString("dd/MM/yyyy"),
                     Grade = 11,
-                    StudyDay = 1
+                    StudyDay = 1,
+                    Matters = new List<Matter>
+                    {
+                        new Matter
+                        {
+                            Id = 1,
+                            Name = "Matemáticas",
+                            Note = "4.5",
+                            Teacher = new Teacher
+                            {
+                                Id = 1,
+                                Name = "Carlos Alberto",
+                                LastName = "Zambrano",
+                                TypeId = 1,
+                                Identification = "1026580774",
+                                Grade = 11,
+                                StudyDay = 1
+                            }
+                        },
+                        new Matter
+                        {
+                            Id = 2,
+                            Name = "Ciencias",
+                            Note = "4.7",
+                            Teacher = new Teacher
+                            {
+                                Id = 2,
+                                Name = "Alain",
+                                LastName = "Tapia",
+                                TypeId = 1,
+                                Identification = "52657895",
+                                Grade = 10,
+                                StudyDay = 1
+                            }
+                        }
+                    }
                 },
                 new Student
                 {
@@ -71,7 +106,42 @@ namespace SincoABR.Repositories
                     Phone = "3002546897",
                     Dob = DateTime.Now.AddYears(-20).ToString("dd/MM/yyyy"),
                     Grade = 10,
-                    StudyDay = 1
+                    StudyDay = 1,
+                    Matters = new List<Matter>
+                    {
+                        new Matter
+                        {
+                            Id = 1,
+                            Name = "Español",
+                            Note = "3.5",
+                            Teacher = new Teacher
+                            {
+                                Id = 1,
+                                Name = "Carlos Alberto",
+                                LastName = "Zambrano",
+                                TypeId = 1,
+                                Identification = "1026580774",
+                                Grade = 11,
+                                StudyDay = 1
+                            }
+                        },
+                        new Matter
+                        {
+                            Id = 2,
+                            Name = "Inglés",
+                            Note = "5.0",
+                            Teacher = new Teacher
+                            {
+                                Id = 2,
+                                Name = "Alain",
+                                LastName = "Tapia",
+                                TypeId = 1,
+                                Identification = "52657895",
+                                Grade = 10,
+                                StudyDay = 1
+                            }
+                        }
+                    }
                 }
             };
 
